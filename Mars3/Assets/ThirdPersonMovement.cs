@@ -38,6 +38,7 @@ public class ThirdPersonMovement : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 
             rb.AddForce(moveDir * speed * Time.deltaTime, ForceMode.VelocityChange);
+            //rb.AddForce(moveDir * speed * Time.deltaTime);
             // transform.Translate(playerMovement, Space.Self);
         }
 
