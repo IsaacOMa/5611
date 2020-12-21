@@ -40,6 +40,11 @@ public class ThirdPersonMovement : MonoBehaviour
             rb.AddForce(moveDir * speed * Time.deltaTime, ForceMode.VelocityChange);
             // transform.Translate(playerMovement, Space.Self);
         }
+
+        if (rb.position.y < -5f)
+        {
+            FindObjectOfType<GameManager>().EndGame();
+        }
     }
 
 }
