@@ -32,7 +32,7 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
 
-            Vector3 playerMovement = new Vector3(horizontal, 0f, vertical) * speed * Time.deltaTime;
+           // Vector3 playerMovement = new Vector3(horizontal, 0f, vertical) * speed * Time.deltaTime;
 
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
